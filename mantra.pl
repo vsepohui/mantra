@@ -5,7 +5,7 @@ use warnings;
 
 $| = 1;
 
-my @say = qw/Hare Krisha Rama/;
+my @say = qw/Hare Krishna Rama/;
 my @seq = qw/0 1 0 1 1 1 0 0 0 2 0 2 2 2 0 0/;
 
 for (1..108) {
