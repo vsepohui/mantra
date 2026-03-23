@@ -9,7 +9,7 @@ my @say = qw/Hare Krishna Rama Om/;
 my @seq = ([qw/0 1 0 1 3/], [qw/0 2 0 2 3/], [qw/3/x5]);
 my @rythm = qw/0 1 0 1 2/;
 
-for (2) {
+for (1..2) {
 	my $c = 1;
 	for my $r (@rythm) {
 		for (1..5) {
