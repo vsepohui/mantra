@@ -12,8 +12,8 @@ for (1..108) {
 	my $c = 0;
 	for (split //, $seq) {
 		print $say[$_] . ($c % 2 ? "!\n" : ' ');
-		sleep 1;
 		$c ++;
+		sleep 1;		
 	}
 	say '';
 }
