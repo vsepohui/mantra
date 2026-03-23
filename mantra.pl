@@ -11,8 +11,7 @@ my $seq = '0101110002022200';
 for (1..108) {
 	my $c = 0;
 	for (split //, $seq) {
-		print $say[$_] . ($c % 2 ? "!\n" : ' ');
-		$c ++;
+		print $say[$_] . ($c ++ % 2 ? "!\n" : ' ');
 		sleep 1;		
 	}
 	say '';
