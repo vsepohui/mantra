@@ -10,7 +10,7 @@ my @say = qw/Aum Mani Padme Hum/;
 for (1..8) {
 	my $c = 1;
 	for (@say) {
-		print $_ . ($c ++ % scalar @say == 0 ? "!\n" : ' ');
+		print $_ . ($c ++ % scalar @say ? ' ' : "!\n");
 		sleep 1;		
 	}
 }
