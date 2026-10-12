@@ -8,7 +8,7 @@ WriteMakefile(
     NAME         => 'mantra',
     AUTHOR       => q{Ivan Trunaev},
     EXE_FILES 	 => [ './bin/mantra' ],
-    VERSION		 => '1',
+    VERSION		 => '1.1',
 );
 
 1;
