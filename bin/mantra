@@ -44,15 +44,17 @@ mantra - 108 numbers of mantra
 
 =head1 SYNOPSIS
 
-Usage: mantra [n]
+    Usage: mantra [n]
+    
+        mantra
+        mantra 16
+        mantra 108
+    
+    Options:
+    
+        Numbers of mantra (default: 108)
 
-       mantra
-       mantra 16
-       mantra 108
-       	
-Options:
-
-       Numbers of mantra (default: 108)
+=head1 AUTHOR
 
 mantra developed by Ivan Trunaev, Russia, 2026
 
