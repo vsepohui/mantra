@@ -1,0 +1,46 @@
+#!/usr/bin/perl
+
+use 5.022;
+use warnings;
+
+$| = 1;
+
+my @say = qw/Hare Krishna Rama/;
+my @seq = qw/0 1 0 1 1 1 0 0 0 2 0 2 2 2 0 0/;
+
+my $n = $ARGV[-1] // 108;
+
+for (1..$n) {
+	my $c = 0;
+	for (@seq) {
+		print $say[$_] . ($c ++ % 2 ? "!\n" : ' ');
+		sleep 1;		
+	}
+	say '';
+}
+
+1;
+
+=encoding utf8
+
+=head1 NAME
+
+mantro - 108 numbers of mantra
+
+=head1 SYNOPSIS
+
+Usage: mantra [n]
+
+       mantra
+       mantra 16
+       mantra 108
+       	
+Options:
+
+       Number of mantras. Default 108
+
+mantra developed by Ivan Trunaev, Russia, 2026
+
+Contacts <ivan@trunaev.ru>
+
+=cut
