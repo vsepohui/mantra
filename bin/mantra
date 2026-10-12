@@ -3,12 +3,17 @@
 use 5.022;
 use warnings;
 
+use Pod::Usage qw(pod2usage);
+
 $| = 1;
 
 my @say = qw/Hare Krishna Rama/;
-my @seq = qw/0 1 0 1 1 1 0 0 0 2 0 2 2 2 0 0/;
+my @seq = (split(//,'010'),((1)x3),((0)x2));
+push @seq, map {$_*2} @seq;
 
 my $n = $ARGV[-1] // 108;
+
+usage() unless $n =~ /^\d+/ && $n > 0;
 
 for (1..$n) {
 	my $c = 0;
@@ -19,13 +24,23 @@ for (1..$n) {
 	say '';
 }
 
+sub usage {
+	my $file = @_ ? "$_[0]" : (caller)[1];
+	open my $handle, '>', \my $output;
+	pod2usage -exitval => 'noexit', -input => $file, -output => $handle;
+	$output =~ s/^.*\n|\n$//;
+	$output =~ s/\n$//g;
+	say $output;
+	exit;
+}
+
 1;
 
 =encoding utf8
 
 =head1 NAME
 
-mantro - 108 numbers of mantra
+mantra - 108 numbers of mantra
 
 =head1 SYNOPSIS
 
@@ -37,7 +52,7 @@ Usage: mantra [n]
        	
 Options:
 
-       Number of mantras. Default 108
+       Numbers of mantra (default: 108)
 
 mantra developed by Ivan Trunaev, Russia, 2026
 
