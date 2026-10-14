@@ -2,10 +2,10 @@ Hare Krishna!
 
 # Hearing mantra?
 
-Setup mantra and espeak-ng package and run:
+Setup mantra and espeak package and run:
 
 ```
-mantra | espeak-ng
+mantra | espeak
 ```
 
 # Credits
